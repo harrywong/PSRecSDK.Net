@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace PSReCSDKLib
+{
+    public enum PR_Component
+    {
+        PTP = 0x00100000,
+        PRSDK = 0x00200000,
+        WIA_STI = 0x00300000,
+        WINDOWS = 0x00400000,
+        COMIF = 0x00500000,
+    }
+
+    public enum PR_Error : uint
+    {
+        prERROR_COMPONENTID_MASK = 0x00F00000,
+        prERROR_ERRORID_MASK = 0x0000FFFF,
+        prOK = 0x00000000,
+        prRESPONSE_Undefined = 0x00002000,
+        prRESPONSE_GeneraError = 0x00002002,
+        prRESPONSE_SessionNotOpen = 0x00002003,
+        prRESPONSE_InvaidTransactionID = 0x00002004,
+        prRESPONSE_OperationNotSupported = 0x00002005,
+        prRESPONSE_ParameterNotSupported = 0x00002006,
+        prRESPONSE_IncompeteTransfer = 0x00002007,
+        prRESPONSE_InvaidStorageID = 0x00002008,
+        prRESPONSE_InvaidObjectHande = 0x00002009,
+        prRESPONSE_DevicePropNotSupported = 0x0000200A,
+        prRESPONSE_InvaidObjectFormatCode = 0x0000200B,
+        prRESPONSE_StoreFu = 0x0000200C,
+        prRESPONSE_ObjectWriteProtected = 0x0000200D,
+        prRESPONSE_StoreRead_Ony = 0x0000200E,
+        prRESPONSE_AccessDenied = 0x0000200F,
+        prRESPONSE_NoThumbnaiPresent = 0x00002010,
+        prRESPONSE_SefTestFaied = 0x00002011,
+        prRESPONSE_PartiaDeetion = 0x00002012,
+        prRESPONSE_StoreNotAvaiabe = 0x00002013,
+        prRESPONSE_SpecificationByFormatUnsupported = 0x00002014,
+        prRESPONSE_NoVaidObjectInfo = 0x00002015,
+        prRESPONSE_InvaidCodeFormat = 0x00002016,
+        prRESPONSE_UnknownVendorCode = 0x00002017,
+        prRESPONSE_CaptureAreadyTerminated = 0x00002018,
+        prRESPONSE_DeviceBusy = 0x00002019,
+        prRESPONSE_InvaidParentObject = 0x0000201A,
+        prRESPONSE_InvaidDevicePropFormat = 0x0000201B,
+        prRESPONSE_InvaidDevicePropVaue = 0x0000201C,
+        prRESPONSE_InvaidParameter = 0x0000201D,
+        prRESPONSE_SessionAreadyOpen = 0x0000201E,
+        prRESPONSE_TransactionCanceed = 0x0000201F,
+        prRESPONSE_SpecificationOfDestinationUnsupported = 0x00002020,
+        prRESPONSE_Ex_Undefined = 0x0000A000,
+        prRESPONSE_Ex_UnknownCommandReceived = 0x0000A001,
+        prRESPONSE_Ex_MemAocFaied = 0x0000A002,
+        prRESPONSE_Ex_InternaError = 0x0000A003,
+        prRESPONSE_Ex_DirIOError = 0x0000A004,
+        prRESPONSE_Ex_RefusedByOtherProcess = 0x0000A005,
+        prRESPONSE_Ex_CoverCosed = 0x0000A006,
+        prRESPONSE_Ex_NoReease = 0x0000A007,
+        prRESPONSE_Ex_DeviceIsHot = 0x0000A008,
+        prRESPONSE_Ex_owBattery = 0x0000A009,
+        prRESPONSE_Ex_AreadyExit = 0x0000A00A,
+        prUNIMPEMENTED = 0x00000001,
+        prINTERNA_ERROR = 0x00000002,
+        prMEM_AOC_FAIED = 0x00000003,
+        prMEM_FREE_FAIED = 0x00000004,
+        prOPERATION_CANCEED = 0x00000005,
+        prINCOMPATIBE_VERSION = 0x00000006,
+        prNOT_SUPPORTED = 0x00000007,
+        prUNEXPECTED_EXCEPTION = 0x00000008,
+        prPROTECTION_VIOATION = 0x00000009,
+        prMISSING_SUBCOMPONENT = 0x0000000A,
+        prSEECTION_UNAVAIABE = 0x0000000B,
+        prINVAID_PARAMETER = 0x00000021,
+        prINVAID_HANDE = 0x00000022,
+        prINVAID_FN_CA = 0x00000061,
+        prWAIT_TIMEOUT_ERROR = 0x00000062,
+        prINSUFFICIENT_BUFFER = 0x00000063,
+        prEVENT_CABACK_EXIST = 0x00000064,
+    }
+}
